@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neog Stocks</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="main-heading">
+        <h1>Stocks P&L Calculatowr</h1>
+      </div>
+      <div class="main-body">
+        <div class="main-body_calculation">
+          <div class="input">
+            <p class="input-label">Stock Price</p>
+            <input class="input-txt" type="number" id="stock-price" />
+          </div>
+
+          <div class="input">
+            <p class="input-label">Stock Quantity</p>
+            <input class="input-txt" type="number" id="stock-quantity" />
+          </div>
+
+          <div class="input">
+            <p class="input-label">Current Price</p>
+            <input class="input-txt" type="number" id="current-price" />
+          </div>
+
+          <button class="btn" id="btn-calculate">Check</button>
+        </div>
+
+        <div class="main-output"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>2021 @ JaswanthReddyPadala</p>
+      <a href="https://github.com/JaswanthReddyPadala/"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/jaswanthreddypadala/"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://twitter.com/jaswanthreddyp2"
+        ><i class="fab fa-twitter"></i
+      ></a>
+    </footer>
+  </body>
+  <script src="./app.js"></script>
+</html>
