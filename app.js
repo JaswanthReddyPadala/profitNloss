@@ -2,13 +2,14 @@ let output = document.querySelector(".main-output");
 
 const checkButton = document.querySelector("#btn-calculate");
 
-checkButton.addEventListener("click", function () {
+checkButton.addEventListener("click", calculate)
+
+function calculate() {
   let stockPrice = document.querySelector("#stock-price").value;
   let stockQuantity = document.querySelector("#stock-quantity").value;
   let currentPrice = document.querySelector("#current-price").value;
-  console.log(stockPrice, stockQuantity, currentPrice);
 
-  if (true) {
+  if (stockPrice && stockQuantity && currentPrice) {
     let buyPrice = stockPrice * stockQuantity;
     let presentPrice = currentPrice * stockQuantity;
     let difference = (presentPrice - buyPrice).toFixed(2);
@@ -17,10 +18,11 @@ checkButton.addEventListener("click", function () {
       output.style.backgroundColor = "#41B784";
       output.style.color = "#ffffff";
       output.innerText = `Your gained ${percentage}%. You total profit is ${difference}`;
-    } else if (difference === 0) {
+    } else if (difference == 0) {
+      output.style.backgroundColor = "white";
+      output.style.color = "#181818";
       output.innerText = "Your Money is just the way it is. 😉";
     } else {
-      console.log(percentage*-1);
         output.style.backgroundColor = "#EA5A5B";
         if(percentage*-1 > 50){
             output.style.backgroundColor = "crimson";
@@ -35,4 +37,4 @@ checkButton.addEventListener("click", function () {
   } else {
     alert("Fill all the input details properly!!!");
   }
-});
+};
