@@ -9,7 +9,7 @@ function calculate() {
   let stockQuantity = document.querySelector("#stock-quantity").value;
   let currentPrice = document.querySelector("#current-price").value;
 
-  if (stockPrice && stockQuantity && currentPrice) {
+  if (stockPrice>0 && stockQuantity>0 && currentPrice>0) {
     let buyPrice = stockPrice * stockQuantity;
     let presentPrice = currentPrice * stockQuantity;
     let difference = (presentPrice - buyPrice).toFixed(2);
@@ -35,6 +35,8 @@ function calculate() {
       output.style.color = "#ffffff";
     }
   } else {
-    alert("Fill all the input details properly!!!");
+    output.style.color = "white";
+    output.style.backgroundColor="black";
+    output.innerText = "Please enter all values";
   }
 };
