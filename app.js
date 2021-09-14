@@ -37,6 +37,6 @@ function calculate() {
   } else {
     output.style.color = "white";
     output.style.backgroundColor="black";
-    output.innerText = "Please enter all values";
+    output.innerText = "Please enter valid inputs";
   }
 };
